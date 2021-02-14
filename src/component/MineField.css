@@ -1,0 +1,21 @@
+.mine-field{position: relative; width: 100%; margin: 0 auto; border-collapse: collapse;}
+.mine-field[data-size='l'] {max-width: 1200px;}
+.mine-field[data-size='m'] {max-width: 800px;}
+.mine-field[data-size='s'] {max-width: 400px;}
+.mine-field div[class^='row-'] {display: flex;}
+.mine-field div[class^='col-'] {position: relative; flex: 1; margin: 0; padding: 0; border: 1px solid #000}
+.mine-field div[class^='col-']::after {content: ""; display: block; width: 100%; padding-bottom: 100%;}
+.mine-field div[class^='row-'] button{position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin: 0; padding: 0; background-color: #fff; outline: none; border: 0; text-align: center;}
+.mine-field[data-cursor='open'] div[class^='row-'] button{cursor: pointer;}
+.mine-field[data-cursor='flag'] div[class^='row-'] button{cursor: alias;}
+.mine-field[data-cursor='mark'] div[class^='row-'] button{cursor: help;}
+.mine-field div[class^='row-'] button[data-value='cover'] {background-color: #999; color: #999;}
+.mine-field div[class^='row-'] button[data-value='cover'] span, .mine-field div[class^='row-'] button[data-value='0'] span{display: none;}
+.mine-field div[class^='row-'] button[data-value='flag'] {background-color: #999; color: #f00; font-weight: bold;}
+.mine-field div[class^='row-'] button[data-value='mark'] {background-color: #999; color: #00f; font-weight: bold;}
+.mine-field div[class^='row-'] button {cursor: default; background-color: #fff; color: #000;}
+
+.mine-field .result{position: absolute; z-index: -1; left: 0; top: 0; width: 100%; height: 100%; background: #0005;}
+.mine-field .result div{position: absolute; left: 0; top: 35%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 30%; background: #fff9; font-size: 30px; font-weight: bold;}
+.mine-field .result.burst,.mine-field .result.win{ z-index: 1;}
+.mine-field .result button{margin: 0 5px;}

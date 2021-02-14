@@ -1,0 +1,5 @@
+.setting{width: 100%; max-width: 1000px; margin: 20% auto 0; text-align: center;}
+.setting .diffForm{margin: 50px 0;}
+.setting .diffForm div{margin: 5px 0;}
+.setting label{padding-right: 20px;}
+.setting input:out-of-range{color: #f00; background-color: #fcc;}

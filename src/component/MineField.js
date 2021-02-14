@@ -125,7 +125,7 @@ export default function MineField(props) {
                     <span>{result == 'burst' ? 'You Burst' : 'You Win!'}</span>
                     <span>
                         <button type="button" onClick={()=> window.location.reload()}>{result == 'burst' ? 'Retry' : 'new game'}</button>
-                        <Link to="/"><button type="button">Go Home</button></Link>
+                        <Link to="/mine-sweeper/"><button type="button">Go Home</button></Link>
                     </span>
                 </div>
             </div>

@@ -20,20 +20,19 @@ function App() {
   }
   return (
     <div className="mine-sweeper">
-      <Router>
+      <Router >
         <header className="header">
-          
         </header>
         <div className="container">
-          <Route exact path="/">
+          <Route exact path="/mine-sweeper/">
             <Setting diff={diff} setDiff={setDiff}>
               <Link to={{
-                pathname: "/game",
+                pathname: "/mine-sweeper/game",
                 state: {diff: diff, cursor: "open", func: mineFieldFunc()}
               }}>게임시작</Link>
             </Setting>
           </Route>
-          <Route path="/game" component={MineField} />
+          <Route path="/mine-sweeper/game" component={MineField} />
         </div>
       </Router>
     </div>
